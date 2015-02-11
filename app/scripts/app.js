@@ -9,4 +9,4 @@
  * Main module of the application.
  */
 angular
-  .module('elsaArdilaApp', ['ui.bootstrap']);
+  .module('elsaArdilaApp', ['mgcrea.ngStrap', 'ui.bootstrap']);
