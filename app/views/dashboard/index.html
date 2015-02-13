@@ -1,0 +1,28 @@
+<div ng-controller="DashboardCtrl">
+    <div id="newsContainer">
+      <carousel interval="carouselInterval">
+          <slide ng-repeat="new in lastNews">
+              <div>
+                  <img ng-src="{{new.image}}" style="margin:auto;">
+              </div>
+              <div>
+                  <h2>{{new.title}}</h2>
+                  <p>{{new.description}}</p>
+              </div>
+          </slide>
+      </carousel>
+    </div>
+
+    <div id="lastProductsContainer">
+        <slick dots="true" infinite="true" speed="1" slides-to-show="3" touch-move="false" slides-to-scroll="1" autoplay="true">
+            <div ng-repeat="products in lastProducts">
+                <div>
+                    <img ng-src="{{products.image}}" style="margin:auto;">
+                </div>
+                <div>
+                    <p>{{products.name}}</p>
+                </div>
+            </div>
+        </slick>
+    </div>
+</div>
